@@ -1,11 +1,3 @@
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true -- Use spaces instead of tabs
-vim.opt.signcolumn = 'no'
-vim.opt.showmode = false
-vim.o.cmdheight = 0
-vim.opt.shortmess:append('I')
-
 -- lsp servers
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('cssls')
@@ -74,9 +66,11 @@ Plug('neovim/nvim-lspconfig')
 
 Plug('hrsh7th/cmp-nvim-lsp')
 Plug('hrsh7th/nvim-cmp')
-Plug('mfussenegger/nvim-lint')
 Plug('hrsh7th/cmp-vsnip')
 Plug('hrsh7th/vim-vsnip')
+Plug('hrsh7th/cmp-buffer')
+Plug('hrsh7th/cmp-path')
+Plug('hrsh7th/cmp-cmdline')
 
 vim.call('plug#end')
 
@@ -92,6 +86,7 @@ require('mason-lspconfig').setup()
 -- move config and plugin config to alternate files
 require('config.mappings')
 require('config.autocmd')
+require('config.options')
 
 require('plugins.alpha')
 require('plugins.autopairs')
