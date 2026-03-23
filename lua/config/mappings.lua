@@ -72,7 +72,8 @@ map('n', '<leader>R', ':so %<CR>') --reload neovim config
 map('n', '<leader>u', ':silent !xdg-open "<cWORD>" &<CR>') --open a url under cursor
 map('v', '<leader>i', '=gv') --auto indent
 map('n', '<leader>W', ':set wrap!<CR>') --toggle wrap
-map('n', '<leader>l', ':Twilight<CR>') --surrounding dim
+map('n', '<leader>l', ':noh<CR>') -- clear selection
+map('n', 'gl', ':lua vim.diagnostic.open_float()<CR>') -- check error
 
 -- decisive csv
 map('n', '<leader>csa', ":lua require('decisive').align_csv({})<cr>")
